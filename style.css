@@ -1,0 +1,251 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #ffffff;
+    color: #111111;
+    line-height: 1.7;
+}
+
+/* NAVIGATION */
+header {
+    background: #000000;
+    padding: 20px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav h2 {
+    color: #ffffff;
+    font-size: 27px;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #aaaaaa;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    background: #000000;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 65px);
+    font-weight: 800;
+    line-height: 1.2;
+    max-width: 850px;
+    letter-spacing: -2px;
+}
+
+.hero p {
+    color: #cccccc;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 25px 0 35px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #000000;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #000000;
+    color: #ffffff;
+    transform: translateY(-4px);
+}
+
+/* ABOUT SECTION */
+.about {
+    padding: 90px 10%;
+    text-align: center;
+    background: #ffffff;
+}
+
+.about h2,
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    color: #555555;
+    font-size: 17px;
+}
+
+/* FEATURES SECTION */
+.features {
+    padding: 85px 8%;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 35px 25px;
+    border: 1px solid #dddddd;
+    border-radius: 16px;
+    flex: 1 1 220px;
+    max-width: 340px;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    background: #000000;
+    color: #ffffff;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+}
+
+.card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #666666;
+    font-size: 15px;
+}
+
+.card:hover p {
+    color: #cccccc;
+}
+
+/* FOOTER */
+footer {
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .hero {
+        min-height: 400px;
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .about,
+    .features {
+        padding: 60px 20px;
+    }
+
+    .about h2,
+    .features h2 {
+        font-size: 29px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+/* Back to top button */
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: black;
+    color:rgb(241, 78, 186);
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#topButton:hover {
+    background: #555;
+}
+
+/* Section animation */
+section {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
